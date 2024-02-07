@@ -19,6 +19,7 @@ const NAV_MENU = [
   {
     name: "Page",
     icon: RectangleStackIcon,
+    href: "/about"
   },
   {
     name: "Account",
