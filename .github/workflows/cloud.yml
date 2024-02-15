@@ -19,11 +19,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
           script: |
             cd /dev/nextjs-tailwind-portfolio-page
-            git pull origin main
-            docker-compose down
-            docker-compose build
-            docker-compose up -d
-
+            echo 'Deployment to ovh cloud finished'
