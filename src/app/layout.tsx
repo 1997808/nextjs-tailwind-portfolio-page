@@ -4,9 +4,7 @@ import type { Metadata } from "next";
 import { Layout, FixedPlugin } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Next.js + Tailwind Portfolio Page",
-  description:
-    "Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.",
+  title: "Dev Portal"
 };
 
 export default function RootLayout({

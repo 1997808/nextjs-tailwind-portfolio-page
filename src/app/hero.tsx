@@ -19,9 +19,7 @@ function Hero() {
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            I&apos;m Lily Smith, a passionate web developer based in USA. Here,
-            you&apos;ll get a glimpse of my journey in the world of web
-            development, where creativity meets functionality.
+            I&apos;m Khanh, a dedicated web developer specializing in Node.js and React.js, eager to expand my skills and delve deeper into the world of web development. Here, you&apos;ll get a glimpse of my journey as I explore the intersection of creativity and functionality in web development.
           </Typography>
           <div className="grid">
             <Typography
