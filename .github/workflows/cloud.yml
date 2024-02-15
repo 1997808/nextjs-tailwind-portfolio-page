@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /dev/nextjs-tailwind-portfolio-page
+            cd dev/nextjs-tailwind-portfolio-page
             git pull origin main
             docker-compose down
             docker-compose build
