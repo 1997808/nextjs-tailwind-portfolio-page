@@ -8,21 +8,21 @@ function Hero() {
     <header className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
         <div className="row-start-2 lg:row-auto">
-          <Typography
+          <Typography placeholder={""}
             variant="h1"
             color="blue-gray"
             className="mb-4 lg:text-5xl !leading-tight text-3xl"
           >
             Dev Portal
           </Typography>
-          <Typography
+          <Typography placeholder={""}
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
             I&apos;m Khanh, a dedicated web developer specializing in Node.js and React.js, eager to expand my skills and delve deeper into the world of web development. Here, you&apos;ll get a glimpse of my journey as I explore the intersection of creativity and functionality in web development.
           </Typography>
           <div className="grid">
-            <Typography
+            <Typography placeholder={""}
               variant="small"
               className="mb-2 text-gray-900 font-medium"
             >
@@ -36,7 +36,7 @@ function Hero() {
               </Button>
             </div>
           </div>
-          <Typography variant="small" className="font-normal !text-gray-500">
+          <Typography placeholder={""} variant="small" className="font-normal !text-gray-500">
             Read my{" "}
             <a href="#" className="font-medium underline transition-colors">
               Terms and Conditions

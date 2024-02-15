@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/next-script-for-ga */
 import "../globals.css";
 import type { Metadata } from "next";
-import { Layout, FixedPlugin } from "@/components";
+import { Layout } from "@/components";
 
 export const metadata: Metadata = {
   title: "Dev Portal",
@@ -25,7 +25,6 @@ export default function NodeLayout({
       <body>
         <Layout>
           {children}
-          <FixedPlugin />
         </Layout>
       </body>
     </html>

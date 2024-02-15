@@ -6,30 +6,28 @@ import {
   IconButton,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 import {
-  RectangleStackIcon,
-  UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
   XMarkIcon,
   Bars3Icon,
+  UsersIcon,
+  BookOpenIcon,
+  ChatBubbleLeftEllipsisIcon,
 } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
   {
-    name: "Page",
-    icon: RectangleStackIcon,
-    href: "/about"
+    name: "About Us",
+    icon: UsersIcon,
   },
   {
-    name: "Account",
-    icon: UserCircleIcon,
+    name: "Blog",
+    icon: BookOpenIcon,
   },
   {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
-  },
+    name: "Contact",
+    icon: ChatBubbleLeftEllipsisIcon,
+  }
 ];
 
 interface NavItemProps {
@@ -40,7 +38,7 @@ interface NavItemProps {
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
-      <Typography
+      <Typography placeholder={""}
         as="a"
         href={href || "#"}
         target={href ? "_blank" : "_self"}
@@ -69,12 +67,19 @@ export function Navbar() {
   return (
     <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
-        <Typography color="blue-gray" className="text-lg font-bold">
-          Material Tailwind
+        <Typography placeholder={""} color="blue-gray" className="text-lg font-bold">
+          <Image
+            key={"key"}
+            alt={"logo"}
+            width={768}
+            height={768}
+            className="h-10 w-auto"
+            src={`/svg/logo-black.svg`}
+          />
         </Typography>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
-          {NAV_MENU.map(({ name, icon: Icon, href }) => (
-            <NavItem key={name} href={href}>
+          {NAV_MENU.map(({ name, icon: Icon }) => (
+            <NavItem key={name}>
               <Icon className="h-5 w-5" />
               {name}
             </NavItem>
@@ -82,9 +87,7 @@ export function Navbar() {
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
           <Button variant="text">Sign In</Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color="gray">blocks</Button>
-          </a>
+          <Button variant="text">Log In</Button>
         </div>
         <IconButton
           variant="text"
@@ -111,9 +114,9 @@ export function Navbar() {
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
             <Button variant="text">Sign In</Button>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">blocks</Button>
-            </a>
+            <Button color="gray" className="w-full px-4 md:w-[12rem]">
+              Log In
+            </Button>
           </div>
         </div>
       </Collapse>
