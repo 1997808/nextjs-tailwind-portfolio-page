@@ -71,10 +71,11 @@ export function Navbar() {
           <Image
             key={"key"}
             alt={"logo"}
-            width={768}
-            height={768}
+            width={80}
+            height={80}
+            color={"#000"}
             className="h-10 w-auto"
-            src={`/svg/logo-black.svg`}
+            src={`/svg/logo.svg`}
           />
         </Typography>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">

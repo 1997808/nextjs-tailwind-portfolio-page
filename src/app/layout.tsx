@@ -20,7 +20,7 @@ export default function RootLayout({
           data-site="YOUR_DOMAIN_HERE"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="svg/logo.svg" type="image/svg" />
       </head>
       <body>
         <Layout>
