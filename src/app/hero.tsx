@@ -1,7 +1,46 @@
 "use client";
-
-import Image from "next/image";
 import { Input, Button, Typography } from "@material-tailwind/react";
+import PortalShortcut from "../components/portal-shortcut";
+import { ChartBarIcon, CursorArrowRaysIcon, PuzzlePieceIcon } from "@heroicons/react/24/solid";
+
+const PORTAL_ITEMS = [
+  {
+    icon: ChartBarIcon,
+    name: "Science",
+  },
+  {
+    icon: PuzzlePieceIcon,
+    name: "Web",
+  },
+  {
+    icon: CursorArrowRaysIcon,
+    name: "Certification",
+  },
+  {
+    icon: ChartBarIcon,
+    name: "Bachelor",
+  },
+  {
+    icon: PuzzlePieceIcon,
+    name: "Web",
+  },
+  {
+    icon: CursorArrowRaysIcon,
+    name: "Proficiency",
+  },
+  {
+    icon: ChartBarIcon,
+    name: "Computer",
+  },
+  {
+    icon: PuzzlePieceIcon,
+    name: "Certified",
+  },
+  {
+    icon: CursorArrowRaysIcon,
+    name: "Framework",
+  },
+];
 
 function Hero() {
   return (
@@ -43,13 +82,11 @@ function Hero() {
             </a>
           </Typography>
         </div>
-        <Image
-          width={1024}
-          height={1024}
-          alt="team work"
-          src="/image/image-7.svg"
-          className="h-[36rem] w-full rounded-xl object-cover"
-        />
+        <div className="w-full h-[30rem] rounded-lg grid grid-cols-3 gap-6">
+          {PORTAL_ITEMS.map((item, idx) => (
+            <PortalShortcut key={idx} {...item} />
+          ))}
+        </div>
       </div>
     </header>
   );
