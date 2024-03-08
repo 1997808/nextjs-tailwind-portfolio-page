@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
 
 const CLIENTS = [
@@ -20,7 +19,8 @@ export function Clients() {
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-8">
           {CLIENTS.map((logo, key) => (
-            <Image
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
               key={key}
               alt={logo}
               width={200}

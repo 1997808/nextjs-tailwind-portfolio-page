@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -17,13 +16,15 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
   return (
     <Card color="transparent" shadow={false}>
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
-        <Image
-          src={img}
-          alt={title}
-          width={768}
-          height={768}
-          className="h-full w-full object-cover"
-        />
+        {// eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={img}
+            alt={title}
+            width={768}
+            height={768}
+            className="h-full w-full object-cover"
+          />
+        }
       </CardHeader>
       <CardBody className="p-0">
         <a

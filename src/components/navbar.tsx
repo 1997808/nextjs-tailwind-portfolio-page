@@ -6,7 +6,6 @@ import {
   IconButton,
   Typography,
 } from "@material-tailwind/react";
-import Image from "next/image";
 import {
   XMarkIcon,
   Bars3Icon,
@@ -68,15 +67,18 @@ export function Navbar() {
     <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Typography placeholder={""} color="blue-gray" className="text-lg font-bold">
-          <Image
-            key={"key"}
-            alt={"logo"}
-            width={80}
-            height={80}
-            color={"#000"}
-            className="h-10 w-auto"
-            src={`/svg/logo.svg`}
-          />
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={"key"}
+              alt={"logo"}
+              width={80}
+              height={80}
+              color={"#000"}
+              className="h-10 w-auto"
+              src={`/svg/logo.svg`}
+            />
+          }
         </Typography>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
           {NAV_MENU.map(({ name, icon: Icon }) => (
